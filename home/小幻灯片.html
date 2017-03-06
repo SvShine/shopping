@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.container{
+				width: 820px;
+				padding: 0 15px;
+				margin: 0 auto;
+			}
+			.carousel{
+				position: relative;
+				height: 461px;
+				overflow: hidden;
+			}
+			.image_reel{
+				position: absolute;
+				top: 0;left: 0;
+			}
+			.image_reel img{float: left;}
+			
+			.paging{
+				position: absolute;
+				width: 150px;
+				height: 50px;
+				bottom: 0;
+				right: 0;
+				z-index: 100;
+				text-align: center;
+				line-height: 40px;
+				display: none;
+			}
+			.paging a {
+				padding: 0px 5px;
+				text-decoration: none;
+				color: blue;
+			}
+			.paging a.active{
+				font-weight: bold;
+				background: hotpink;
+				border: 1px solid cornflowerblue;
+				border-radius: 4px;
+			}
+			.paging a:hover{font-weight: bold;}
+		</style>
+		<script src="../public/js/jquery-2.0.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="page-header">幻灯片</h1>
+			
+			<div class="carousel">
+				<div class="window">
+					<div class="image_reel">
+						<a href=""><img src="public/images/11.jpg"/></a>
+						<a href=""><img src="public/images/12.jpg"/></a>
+						<a href=""><img src="public/images/13.jpg"/></a>
+						<a href=""><img src="public/images/11.jpg"/></a>
+					</div>
+				</div>
+				<div class="paging">
+					<a href="" rel="1">1</a>
+					<a href="" rel="2">2</a>
+					<a href="" rel="3">3</a>
+				</div>
+			</div>
+		</div>
+		<button id="button">ajax</button>
+		<div class="footer">aaaaaaaaaa</div>
+	</body>
+	<script type="text/javascript">
+		$('#button').click(function(){
+			$.ajax({
+				type:"post",
+				url:"get.php",
+				async:true,
+				success: function(res){
+					htmlobj='<h1>'+res+'</h1>';
+					$('.footer').html(htmlobj);
+				}
+			});
+			
+		})
+		
+		
+		//第一步
+		$('.paging').show();
+		$('.paging a:first').addClass('active');
+		
+		var imageWidth = $('.window').width();
+		var imageSum = $('.image_reel img').size();
+		var imageReelWidth = imageWidth*imageSum;
+		
+		$('.image_reel').css({'width':imageReelWidth});
+		//第二步
+		rotate = function(end){
+			if(end){
+				var triggerID = imageSum-1;
+				var image_reelPosition = triggerID*imageWidth;
+				
+				$('.paging a').removeClass('active');
+				$active.addClass('active');
+				
+				$('.paging a').removeClass('active');
+				$active.addClass('active');
+				
+				$('.image_reel').animate({
+					left:-image_reelPosition
+				},500,function(){
+					$(this).css({'left':'0px'});
+				});
+			}else{
+				
+				var triggerID = $active.attr('rel') - 1;
+				var image_reelPosition = triggerID*imageWidth;
+				
+				$('.paging a').removeClass('active');
+				$active.addClass('active');
+				
+				$('.image_reel').animate({
+					left: -image_reelPosition
+				},500);
+			}
+		};
+		
+		rotateSwitch = function(){
+			play = setInterval(function(){
+				
+				$active = $('.paging a.active').next();
+				rel = $('.paging a.active').attr('rel');
+				document.title=rel; //不要
+				if(rel==3){
+					$active = $('.paging a:first');
+					end = true;
+				}else{
+					end=false;
+				}
+				rotate(end);
+			},2000);
+		};
+		
+		rotateSwitch();
+		//第三步
+		//on hover
+		$(".image_reel a").hover(function(){
+			clearInterval(play);
+		},function(){
+			rotateSwitch();
+		});
+		$('.paging a').click(function(){
+			$active = $(this);
+			clearInterval(play);
+			rotate();
+			rotateSwitch();
+			return false;
+		});
+	</script>;
+</html>

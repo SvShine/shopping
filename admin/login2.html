@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.login{
+				width: 500px;
+				height: 300px;
+				background: #ccc;
+				
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -250px;
+				margin-top: -150px;
+				
+				border-radius: 20px;
+			}
+			.panel-title{
+				text-align: center;
+			}
+			.enter{
+				text-align: center;
+				margin-top: 15px;
+			}
+		</style>
+		<link rel="stylesheet" href="../public/bs/css/bootstrap.min.css"/>
+		<script src="../public/js/jquery-2.0.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../public/bs/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../public/js/jquery.toggle.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="panel panel-primary login">
+			<div class="panel-heading">
+				<div class="panel-title">
+					<img src="../public/images/logo.png"/>
+				</div>
+			</div>
+			<div class="panel-body">
+				<form action="index.html" method="post">
+					<div class="form-group">
+						<div class="input-group input-group-lg">
+							<span class="input-group-addon">
+								<span class="glyphicon glyphicon-user"></span>
+							</span>
+							<input type="text" class="form-control" placeholder="用户名"/>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<div class="input-group input-group-lg">
+							<span class="input-group-addon">
+								<span class="glyphicon glyphicon-lock"></span>
+							</span>
+							<input type="password" class="form-control" placeholder="密码"/>
+						</div>
+					</div>
+					<div class="form-group enter">
+						<input type="submit" value="登陆" class="btn btn-primary btn-lg" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

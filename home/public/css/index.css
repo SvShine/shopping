@@ -1,0 +1,470 @@
+*{
+	font-family: "微软雅黑";
+	margin: 0px;
+	padding: 0px;
+	font-size: 13px;
+}
+a{
+	text-decoration: none;
+	color: #888;
+}
+body{
+	background: f9f9f9;
+	overflow-x: hidden;
+}
+.top{
+	height: 26px;
+	background: #f2f2f2;
+}
+.main{
+	width: 1200px;
+	margin: 0 auto;
+	line-height: 26px;
+	color: #888;
+}
+.main-left{
+	float: left;
+}
+.main-right{
+	float: right;
+}
+.main-right .topRed{
+	color: #c00;
+}
+.main-right .shouji{
+	background: #c00;
+	color: #fff;
+	padding: 0 5px;
+	border-radius: 3px;
+}
+.main .right .cart{
+	transform: rotate(180deg);
+	width: 15px;
+	height: 15px;
+	background: url('../images/public.png') no-repeat -18px 3px ;
+	padding-left: 15px;
+}
+.main-right .shouji .bilibili{
+	width: 15px;
+	height: 15px;
+	padding-left: 15px;
+	background: url('../images/phone.png') no-repeat -5px -1px ;
+}
+.main-right .web{
+	width: 15px;
+	height: 15px;
+	background: url('../images/public.png') no-repeat -80px 1px ;
+	padding-left: 15px;
+}
+.main-right .kefu{
+	width: 15px;
+	height: 15px;
+	background: url('../images/public.png') no-repeat -90px -264px ;
+	padding-left: 15px;
+}
+.main-left span,.main-left a{
+	margin-right: 5px;
+}
+.main-right span,.main-right a{
+	margin-left: 5px;
+}
+.main-right .canaan{
+	cursor: pointer;
+	width: 90px;
+	float: left;
+}
+.main-right .mycanaan{
+	width: 15px;
+	height: 15px;
+	background: url('../images/public.png') no-repeat -99px 7px ;
+	padding-left: 15px;
+}
+.main-right .candropdown{
+	position: absolute;
+	width: 100px;
+	background: #fff;
+	display: none;
+}
+.main-right .candropdown ul{
+	list-style: none;
+}
+.banner{
+	width: 1366px;
+	overflow: hidden;
+}
+.banner img{
+	display: block;
+	margin: 0 auto;
+}
+
+.header{
+	height: 91px;
+	background: url('../images/header-bg.png') no-repeat;
+	margin-left: 8px;
+}
+
+.logo{
+	float: left;
+	height: 70px;
+	margin-top: 8px;
+	margin-left: 10px;
+}
+.adv{
+	float: left;
+	margin-top: 4px;
+	margin-left: 20px;
+}
+.search{
+	float: left;
+	margin-top: 15px;
+	margin-left: 30px;
+	width: 540px;
+	height: 60px;
+}
+.youhui{
+	margin-top: 20px;
+	float: right;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.search-top{
+	height: 32px;
+	border: 3px solid #c00;
+	border-radius: 3px;
+}
+.search-top .search-form{
+	width: 439px;
+	height: 22px;
+	line-height: 22px;
+	border: 0 none;
+	padding: 5px;
+	color: #777;
+}
+.search-form:focus{
+	outline: none;
+}
+.search-top .search-btn{
+	width: 85px;
+	height: 32px;
+	line-height: 32px;
+	text-align: center;
+	font-size: 16px;
+	border: 0;
+	color: #fff;
+	background: #f00;
+	cursor: pointer;
+	float: right;
+}
+.search-bottom{
+	width: 540px;
+	height: 18px;
+	padding-top: 5px;
+	
+}
+.search-bottom ul{
+	list-style: none;
+}
+.search-bottom ul li{
+	float: left;
+	margin-right: 12px;
+}
+
+
+
+/*左侧导航*/
+.ppt{
+	width: 1350px;
+	background: red;
+}
+.ppt .div1{
+	height: 40px;
+	overflow: hidden;
+	background: #900;
+	color: #fff;
+}
+
+.ppt .div1 ul{
+	width: 1200px;
+	margin: 0 auto;
+	list-style: none;
+	
+}
+.ppt .div1 ul li{
+	float: left;
+	line-height: 40px;
+	margin-left: 30px;
+	cursor: pointer;
+}
+.ppt .banner{
+	background: #ce171f;
+	width: 150px;
+	text-align: center;
+	margin: 0px!important;
+};
+.ppt .div2{
+	width: 1200px;
+	height: 470px;
+	margin: 0 auto;
+	position: relative;
+}
+.ppt .div3{
+	width: 149px;
+	height: 460px;
+	background: #fff;
+	position: relative;
+	float: left;
+	border-left: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.ppt .div3 ul{
+	list-style: none;
+}
+.ppt .div3 ul li{
+	padding-left: 15px;
+	line-height: 30px;
+	border-bottom: 1px solid #ccc;
+}
+.ppt .div3 ul li:last-child{
+	padding-left: 15px;
+	line-height: 30px;
+	border-bottom: none;
+}
+.ppt .div3 ul li span{
+	color: dimgray;
+}
+.ppt .div3 ul li.left-menu:hover{
+	cursor: pointer;
+	background: lightgray;
+	border-left: 3px solid hotpink;
+	
+}
+.ppt .div3 .right{
+	width: 700px;
+	height: 461px;
+	position: absolute;
+	top: 0px;
+	left: 149px;
+	color: #000;
+	z-index: 10;
+	display: none;
+}
+/*carousel*/
+.carousel{
+	width: 1050px;
+	height: 461px;
+	float: right;
+	position: relative;
+	height: 461px;
+	overflow: hidden;
+}
+.carousel .image_reel{
+	position: absolute;
+	top: 0;left: 0;
+}
+.carousel .image_reel img{float: left;}
+
+.carousel .paging{
+	width: 150px;
+	height: 50px;
+	position: absolute;
+	bottom: 0px;
+	right: 50%;
+	margin-right: -75px;
+	z-index: 1;
+	text-align: center;
+	line-height: 40px;
+}
+.carousel .paging a {
+	padding: 0px 5px;
+	text-decoration: none;
+	color: blue;
+}
+.carousel .paging a.active{
+	font-weight: bold;
+	background: deeppink;
+	border: 1px solid cornflowerblue;
+}
+.carousel .paging a:hover{font-weight: bold;cursor: pointer;}
+/*把链接样式调整为圆*/
+.paging a{
+	border-radius: 50%;
+	background: black;
+}
+.right-adv{
+	width: 171px;
+	height: 452px;
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	margin: 0 auto;
+}
+.right-adv .img{
+	margin-bottom: 1px;
+}
+.right-adv img{
+	display: block;
+}
+.nav-shouban1{
+	display: inline-block;
+	width: 20px;
+	height: 15px;
+	margin-right: 10px;
+	vertical-align: middle;
+	background: url('../images/public.png') -69px -264px;
+}
+.nav-shouban2{
+	display: inline-block;
+	width: 20px;
+	height: 15px;
+	margin-right: 10px;
+	vertical-align: middle;
+	background: url('../images/public.png') 6px -104px;
+}
+.nav-shouban3{
+	display: inline-block;
+	width: 20px;
+	height: 15px;
+	margin-right: 10px;
+	vertical-align: middle;
+	background: url('../images/public.png') -12px -106px;
+}
+.ppt .div3 .right-left{
+	width: 380px;
+	height: 461px;
+	padding: 5px 10px;
+	background: #fff;
+	/*text-align: right;内容靠右侧*/
+	float: left;
+}
+.ppt .menuItemTitle{
+	width: 100px;
+	float: left;
+}
+.ppt .menuItemTitle:hover{
+	width: 97px;
+	border-left: 3px solid darkgray;
+}
+.ppt .menuItemCon{
+	float: right;
+	width: 260px;
+	padding-left: 20px;
+}
+.ppt .menuItemCon a{
+	margin-right: 15px;
+}
+.ppt .menuItemCon a:hover{
+	text-decoration: underline;
+	color: red;
+}
+.ppt .div3 .right-right{
+	width: 300px;
+	float: right;
+}
+.ppt .div3 .right-right img{
+	display: block;
+}
+.clear{
+	clear: both;
+}
+/*content开始设计*/
+.contentFirst{
+	padding-top: 10px;
+}
+.indexTabBox{
+	height: 500px;
+	width: 920px;
+	float: left;
+}
+.indexTabBoxTop{
+	height: 41px;
+}
+.indexTabBoxTop ul{
+	list-style: none;
+}
+.indexTabBoxTop ul li{
+	float: left;
+	width: 183px;
+	line-height: 38px;
+	color: #666;
+	text-align: center;
+	font-size: 16px;
+	background: #f9f9f9;
+	border: 1px solid #ececec;
+	border-top-width: 2px;
+}
+.indexTabBoxTop ul li:hover{
+	background: #fff;
+	cursor: pointer;
+	color: #c00;
+	border-top-color: #c00;
+}
+.indexTabBoxTop .n5{
+	width: 178px;
+}
+.indexTabBoxBottom{
+	height: 460px;
+	background: #fff;
+}
+.indexTabBoxBottom .indexTabCon{
+	width: 910px;
+	height: 442px;
+	margin: 0px 4px;
+	padding: 10px 0px;
+}
+.indexTabBoxBottom .indexTabCon .clearfix{
+	list-style: none;
+}
+.indexTabBoxBottom .indexTabCon ul li{
+	float: left;
+	width: 176px;
+	margin-top: 18px;
+	margin-right: 4px;
+	
+}
+.indexTabBoxBottom .indexTabCon .indexTabPic{
+	position: relative;
+	padding; 0 11px;
+}
+.indexTabBoxBottom .Tag{
+	width: 45px;
+	height: 55px;
+	background: url('../images/Tag.png') no-repeat;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.indexTabBoxBottom .indexTabTit{
+	width: 168px;
+	height: 18px;
+	line-height: 18px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.indexTabBoxBottom .indexTabTit a:hover{
+	color: red;
+	text-decoration: underline;
+}
+.indexTabBoxBottom .indexTabPrice{
+	color: #c00;
+	font-size: 15px;
+	
+}
+.content1border{
+	border-radius: 5px;
+	border: 1px solid #ddd;
+}
+.indexTabRight{
+	height: 500px;
+	width: 270px;
+	float: right;
+}
+.indexTabRightTop{
+	background: #666;
+	height: 38px;
+	
+}
+.indexTabRightBottom{
+	height: 460px;
+	background: deepskyblue;
+}
